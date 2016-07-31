@@ -1,0 +1,193 @@
+---
+:welcome_message: 'Type /start to create a new company'
+:finish_message: 'Thanks, your company has been created!'
+:unknown_command: 'Unknown command. Type /start to create a new company'
+:questions:
+- :id: company_name
+  :text: "Название проекта"
+  :next_question_id: q2
+
+- :id: q2
+  :text: "В какой стране вы хотите запустить проект? (напишите название латиницей)"
+  :next_question_id: q3
+
+- :id: q3
+  :text: "Расскажите поподробнее о вашем потенциальном покупателе:\nКаков возраст вашего потенциального покупателя? (укажите возрастной промежуток, например 18-35)"
+  :next_question_id: q4
+
+- :id: q4
+  :text: "Среди ваших покупателей преобладают мужчины или женщины? (укажите соотношение, например 50-50)"
+  :next_question_id: q5
+
+- :id: q5
+  :text: "Первый варианта ответа: низкий, средний, высокий"
+  :next_question_id: q6
+
+- :id: q6
+  :text: "Укажите ваших конкурентов (Можете указывать ссылки и краткое описание, например \"Яндекс. Такси http://taxi.yandex.ru/\"- основной агрегатор на рынке России, является основным конкурентом. Доля рынка \"- 50%\""
+  :next_question_id: q7
+
+- :id: q7
+  :text: "
+    Укажите один сегмент, который наиболее всего подходит к вашему продукту:\n
+
+    1. Life Science\n
+    - BioTech\n
+    - HealthTech\n
+    - FoodTech\n
+    - Biology\n
+    - Anatomy\n
+    - Anthropology\n
+    - Astrobiology\n
+    - Biochemistry\n
+    - Biogeography\n
+    - Biological engineering\n
+    - Biophysics\n
+    - Behavioral neuroscience\n
+    - Botany\n
+    - Developmental biology\n
+    - Ecology\n
+    - Physiology\n
+    - Sociobiology\n
+    - Systematics\n
+    - Zoology\n
+
+    2. ICT\n
+    - SaaS\n
+    - Big Data\n
+    - FinTech & Cyber-Security\n
+    - Cloud Computing\n
+    - Blockchain\n
+
+    3. IoT\n
+    - Sensors\n
+    - Wearables\n
+    - Smart Grid\n
+    - Smart Houses\n
+    - HardWare\n
+    - Media\n
+    - Environmental monitoring\n
+    - Infrastructure management\n
+    - Manufacturing\n
+    - Energy management\n
+    - Medical and healthcare systems\n
+    - Building and home automation\n
+    - Transportation\n
+    - Large scale deployments\n
+    - Consumer application\n
+
+    4. Robotics\n
+    - Drones\n
+    - Other\n
+
+    5. Artificial Intelligence & Virtual Reality\n
+    - Content\n
+    - Services\n
+    - NeuroTech\n
+    - GameDev\n
+
+    6. E-Commerce\n
+    - NeuroMarketing\n
+    - Online goods and services\n
+    - Retail services\n
+    - Marketplace services\n
+    - Mobile commerce\n
+    - Customer service\n
+    - E-procurement\n
+    - Purchase-to-pay\n"
+  :next_question_id: q8
+
+- :id: q8
+  :text: "Как вы будете доносить информацию о проекте? Основные 2-3 канала выхода на потребителя"
+  :next_question_id: q9
+
+- :id: q9
+  :text: "Сколько человек в вашей команде?"
+  :next_question_id: q10
+
+- :id: q10
+  :text: "Сколько человек из команды занимаются Cust dev? (напишите цифру)"
+  :next_question_id: q11
+
+- :id: q11
+  :text: "Напишите имена коллег, которые занимаются custdev ИЛИ дайте ссылки на их профили Linkedin(fb)"
+  :next_question_id: q12
+
+- :id: q12
+  :text: "Сколько человек из команды занимаются Prod dev? (напишите цифру)"
+  :next_question_id: q13
+
+- :id: q13
+  :text: "Напишите имена коллег, которые занимаются proddev ИЛИ дайте ссылки на их профили Linkedin(fb)"
+  :next_question_id: q14
+
+- :id: q14
+  :text: "Есть ли у вас ментор в команде?"
+  :next_question_id: q15
+
+- :id: q15
+  :text: "Если есть, напишите как его зовут ИЛИ дайте ссылку на Linkedin"
+  :next_question_id: q16
+
+- :id: q16
+  :text: "Какую часть бюджета ты будешь тратить на продукт/разработку/найм разработчиков(в процентах)?"
+  :next_question_id: q17
+
+- :id: q17
+  :text: "Какую часть бюджета ты будешь тратить на маркетинг/привлечение клиентов(в процентах)?"
+  :next_question_id: q18
+
+- :id: q18
+  :text: "Какую часть бюджета ты будешь тратить на дополнительные (+ непредвиденные расходы)"
+  :next_question_id: q19
+
+- :id: q19
+  :text: "Есть готовая финансовая модель? приложи линк на неё (это гораздо увеличивает твои шансы на получение $$$$$)"
+  :next_question_id: q20
+
+- :id: q20
+  :text: "Как вы собираетесь зарабатывать (источники дохода?)"
+  :next_question_id: q21
+
+- :id: q21
+  :text: "Опишите в чём преимущества вашего продукта? что у вас такого есть, что вы можете конкурировать на рынке (например, \"у меня дядя депутат\")"
+  :next_question_id: q22
+
+- :id: q22
+  :text: "Опишите ваше уникальное торговое предложение (УТП), что вы делаете? "
+  :next_question_id: q23
+
+- :id: q23
+  :text: "Сколько будет стоить привлечение 1 пользователя (в CPA - K1)"
+  :next_question_id: q24
+
+- :id: q24
+  :text: "Какую конверсию вы ожидаете из пользователя в клиента? (в процентах) (в CPS)"
+  :next_question_id: q25
+
+- :id: q25
+  :text: "Какой средний чек (AvBill)?"
+  :next_question_id: q26
+
+- :id: q26
+  :text: "Себестоимость продукта от среднего чека (в COGS)?"
+  :next_question_id: q27
+
+- :id: q27
+  :text: "Сколько раз пользователь купит у вас это ? вернётся? удержание (APC)"
+  :next_question_id: q28
+
+- :id: q28
+  :text: "Сколько пользователей ты собираешься привлечь за 2 года? (UA)"
+  :next_question_id: q29
+
+- :id: q29
+  :text: "Сколько ты собираешься потратить на рекламу за 2 года? (ADv)"
+  :next_question_id: q30
+
+- :id: q30
+  :text: "Сколько fix costs будет за 2 года? (Fix Cost)"
+  :next_question_id: q31
+
+- :id: q31
+  :text: "Укажите ваши контакты для связи"
