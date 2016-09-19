@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   validates :telegram_id, presence: true, uniqueness: true
 
   def save_survey_answer(question_id, answer)

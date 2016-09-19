@@ -1,9 +1,0 @@
----
-:orm: activerecord
-:test: rspec
-:mock: none
-:script: none
-:renderer: haml
-:stylesheet: none
-:namespace: KnomsyTelegram
-:migration_format: number

@@ -5,7 +5,7 @@ module BotCommand
     def initialize(user, message = nil)
       @user    = user
       @message = message
-      @api     = Telegram::Bot::Api.new(ENV['BOT_TOKEN'])
+      @api     = Telegram::Bot::Api.new(ENV.fetch('BOT_TOKEN'))
     end
 
     def start?
@@ -38,7 +38,7 @@ module BotCommand
 
     def bot_config
       @questions ||= OpenStruct.new(
-        YAML.load_file(File.join(Padrino.root, 'config/bot_config.yml'))
+        YAML.load_file(Rails.root.join('config/bot_config.yml'))
       )
     end
   end

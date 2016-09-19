@@ -1,3 +1,4 @@
+# command: bundle exec foreman start
 version: '2'
 services:
   app:
@@ -11,10 +12,9 @@ services:
       - ./.docker/db.env
     ports:
       - '3000:3000'
+      - '5000:5000'
     links:
       - db
-    tty: true
-    stdin_open: true
 
   db:
     # restart: always

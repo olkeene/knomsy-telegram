@@ -18,9 +18,9 @@ class ProcessBotMessageService
   # }
 
   before do
-    @user    = context.user
-    @params  = context.params
-    @message = context.params[:message]
+    @user    = context.user             or raise(ArgumentError)
+    @params  = context.params           or raise(ArgumentError)
+    @message = context.params[:message] or raise(ArgumentError)
   end
 
   def call
