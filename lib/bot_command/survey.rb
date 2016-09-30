@@ -6,7 +6,7 @@ module BotCommand
       next_question = find_next_question
       if next_question
         user.save_question!(next_question)
-        send_message(text: next_question[:text])
+        send_message(next_question)
       else
         finish_survey!
       end

@@ -1,3 +1,6 @@
+require 'bot_command/start'
+require 'bot_command/help'
+
 class ProcessBotMessageService
   include Interactor
 

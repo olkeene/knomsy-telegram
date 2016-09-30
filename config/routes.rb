@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  post 'telegram_bot', to: 'callbacks#telegram'
+  get 'webhooks/telegram_bot'
+
+  post 'webhooks/telegram_bot', to: 'callbacks#telegram'
 end
