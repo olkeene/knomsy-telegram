@@ -25,27 +25,23 @@ module BotCommand
     end
 
     def send_message(message, _options = {})
-      args = { chat_id: user.telegram_id, text: message[:text] }
-p message
-      if message[:options]
-        # args[:reply_markup] = message[:options].map do |answer|
-        #   Telegram::Bot::Types::InlineKeyboardButton.new(text: answer)
-        # end
+      args = {
+        chat_id: user.telegram_id,
+        text: message[:text],
+        reply_markup: Telegram::Bot::Types::ReplyKeyboardHide.new(hide_keyboard: true)
+      }
 
-        kb = message[:options].each_slice(4).map do |group|
+      if message[:options]
+        kb = message[:options].each_slice(3).map do |group|
           group.map do |answer|
             Telegram::Bot::Types::KeyboardButton.new(text: answer)
           end
         end
-        markup = Telegram::Bot::Types::ReplyKeyboardMarkup.new(keyboard: kb, resize_keyboard: false)
-        args[:reply_markup] = markup
-p args
-
-        # kb = message[:options].map do |answer|
-        #   Telegram::Bot::Types::InlineKeyboardButton.new(text: answer)
-        # end
-        # markup = Telegram::Bot::Types::InlineKeyboardMarkup.new(keyboard: kb)
-        # args[:reply_markup] = markup
+        args[:reply_markup] = Telegram::Bot::Types::ReplyKeyboardMarkup.new(
+          keyboard: kb,
+          resize_keyboard: true,
+          one_time_keyboard: true
+        )
       end
 
       api.call('sendMessage', args)
