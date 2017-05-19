@@ -1,10 +1,11 @@
 # Telegram bot
+ Telegram bot for https://github.com/olkeene/knomsy
 
 ## Transformation steps
-
-Manual https://medium.com/@MaximAbramchuk/full-guide-on-creating-statefull-telegram-bot-523def0a7930
+```bash
 ngrok http 192.168.99.100:3000
 ngrok http 192.168.99.100:5000 -subdomain=knomsy_telegram_dev
+```
 
 Activate:
 https://api.telegram.org/botXXXXX/setWebhook?url=https://70928531.ngrok.io/webhooks/telegram_bot
